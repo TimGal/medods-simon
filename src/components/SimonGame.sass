@@ -1,0 +1,169 @@
+
+.container
+  width: 800px
+  height: 600px
+  margin-top: 20px
+  transform: translateX(-50%)
+  left: 50%
+  position: relative
+  border: 1px dotted grey
+
+.unclickable
+  pointer-events: none
+
+.row
+  display: flex
+  flex-direction: row
+  justify-content: center
+  flex-wrap: wrap
+
+.simon-header
+  font-family: 'Open Sans', sans-serif
+  font-size: 24px
+  font-weight: 400
+
+.game-info
+  font-family: 'Open Sans', sans-serif
+  font-size: 14px
+  font-weight: 300
+  margin: 10px 0
+
+.tile
+  width: 100px
+  height: 100px
+  margin: 20px
+  &:hover
+    cursor: pointer
+  &-red
+    background-color: #f25022
+    border-bottom-left-radius: 100%
+    box-shadow: 0 0 0 1px #f25022 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #c93a12, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5)
+    transition: 0.15s
+    &:focus
+      background-color: #ff8766
+    &:active
+       box-shadow: 0 0 0 1px #ff5c36 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4)
+       background-color: #ff5c36
+       transform: translateY(10px)
+    &.activated
+      box-shadow: 0 0 0 1px #ff5c36 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4)
+      background-color: #ff5c36
+      transform: translateY(10px)
+  &-blue
+    background-color: #00a4ef
+    border-top-right-radius: 100%
+    box-shadow: 0 0 0 1px #00a4ef inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #0883bc, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5)
+    transition: 0.15s
+    &:focus
+      background-color: #3abcf8
+    &:active
+      box-shadow: 0 0 0 1px #2bbcff inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4)
+      background-color: #2bbcff
+      transform: translateY(10px)
+    &.activated
+      box-shadow: 0 0 0 1px #2bbcff inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4)
+      background-color: #2bbcff
+      transform: translateY(10px)
+  &-green
+    background-color: #7fba00
+    border-bottom-right-radius: 100%
+    box-shadow: 0 0 0 1px #7fba00 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #638f05, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5)
+    transition: 0.15s
+    &:focus
+      background-color: #ace630
+    &:active
+      box-shadow: 0 0 0 1px #a0ea00 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4)
+      background-color: #a0ea00
+      transform: translateY(10px)
+    &.activated
+      box-shadow: 0 0 0 1px #a0ea00 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4)
+      background-color: #a0ea00
+      transform: translateY(10px)
+  &-yellow
+    background-color: #ffb900
+    border-top-left-radius: 100%
+    box-shadow: 0 0 0 1px #ffb900 inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 8px 0 0 #c28e07, 0 8px 0 1px rgba(0, 0, 0, 0.4), 0 8px 8px 1px rgba(0, 0, 0, 0.5)
+    transition: 0.15s
+    &:focus
+      background-color: #ffd665
+    &:active
+      box-shadow: 0 0 0 1px #ffca3d inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4)
+      background-color: #ffca3d
+      transform: translateY(10px)
+    &.activated
+      box-shadow: 0 0 0 1px #ffca3d inset, 0 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 0 0 1px rgba(0, 0, 0, 0.4)
+      background-color: #ffca3d
+      transform: translateY(10px)
+
+
+
+.difficulty 
+  display: flex
+  flex-direction: row !important
+  flex-wrap: wrap
+
+  .difficulty-name
+    font-family: 'Open Sans', sans-serif
+    font-size: 18px
+    font-weight: 400
+.difficulty-item-wrapper 
+  label.radio-label 
+    font-family: 'Open Sans', sans-serif
+    font-style: normal
+    font-weight: 300
+    font-size: 14px
+    line-height: 24px
+    color: #111111
+    margin: 0 10px
+  .difficulty-item-wrapper:nth-child(3) 
+    margin-left: 19px
+
+  .difficulty-input 
+    display: none
+
+  .difficulty-radio 
+    display: inline-block
+    border: 0.7px solid #5A61ED
+    width: 12px
+    height: 12px
+    position: relative
+    vertical-align: middle
+    box-sizing: border-box
+    margin-right: 6px
+    border-radius: 300px
+    background-color:#ffffff
+
+    &::before 
+      content: ''
+      background: #5A61ED
+      width: 6px
+      height: 6px
+      opacity: 0
+      transition: 0.3s
+      position: absolute
+      top: 50%
+      left: 50%
+      border-radius: 300px
+      transform: translateX(-50%) translateY(-50%)
+    
+  .difficulty-input:checked + .difficulty-radio:before 
+      opacity: 1
+
+.btn-start 
+    width: 150px
+    height: 30px
+    border: .5px solid #5a61ed
+    color: #5a61ed
+    font-family: Open Sans,sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 18px
+    color: #5a61ed
+    align-self: flex-end
+    border-radius: 15px
+    cursor: pointer
+    &:hover
+      background: #5a61ed
+      color: #fff
+  
